@@ -15,5 +15,5 @@ In my academic journey, I've gained strong foundations in various programming la
 
 - [Public resume](resume.md)
 - [Code Snippits](snippit.md)
-- [Repositories] (repo.md)
+- [Repositories](repo.md)
 - [Game development](gamedev.md)
