@@ -17,7 +17,5 @@ whether it's through personal projects or other collaborative projects.
 
 ## Menu
 
-Some info on how to make a site like this and how it works.
-
 - [Public resume](about.md)
 - [Code Snippits](features.md)
