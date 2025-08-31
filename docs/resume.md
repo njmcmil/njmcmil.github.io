@@ -1,5 +1,5 @@
 # **Public Resume**
 
-[Download my resume](/njmcmil/files/Nathan-McMillan-Resume.pdf)
+[Download my resume](/njmcmil.github.io/files/Nathan-McMillan-Resume.pdf)
 
 
