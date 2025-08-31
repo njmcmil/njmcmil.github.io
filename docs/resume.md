@@ -1,6 +1,7 @@
 # **Public Resume**
 
-[Download my resume](/files/Nathan-McMillan-Resume.pdf)
+<a href="/files/Nathan-McMillan-Resume.pdf" download>Download my resume</a>
+
 
 
 
