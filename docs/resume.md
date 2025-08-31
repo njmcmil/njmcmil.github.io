@@ -1,6 +1,6 @@
 # **Public Resume**
 
-[Download my resume](/Nathan-McMillan-Resume.pdf)
+[View my resume](/Nathan-McMillan-Resume.pdf)
 
 
 
