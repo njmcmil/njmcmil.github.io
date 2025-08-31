@@ -17,30 +17,31 @@ permalink: /
 <div style="display:flex; gap:20px; flex-wrap:wrap; justify-content:center; margin-top:20px;">
 
     <!-- Resume -->
-    <a href="resume.md" 
+    <a href="resume.html" 
        style="background-color:#F66733; color:white; padding:12px 24px; text-decoration:none; border-radius:6px; font-weight:bold; font-family:Arial, sans-serif; display:inline-block;">
        Public Resume
     </a>
 
     <!-- Code Snippets -->
-    <a href="snippit.md" 
+    <a href="snippit.html" 
        style="background-color:#522D80; color:white; padding:12px 24px; text-decoration:none; border-radius:6px; font-weight:bold; font-family:Arial, sans-serif; display:inline-block;">
        Code Snippets
     </a>
 
     <!-- Repositories -->
-    <a href="repo.md" 
+    <a href="repo.html" 
        style="background-color:#333; color:white; padding:12px 24px; text-decoration:none; border-radius:6px; font-weight:bold; font-family:Arial, sans-serif; display:inline-block;">
        Repositories
     </a>
 
     <!-- Game Development -->
-    <a href="gamedev.md" 
+    <a href="gamedev.html" 
        style="background-color:#FF6F61; color:white; padding:12px 24px; text-decoration:none; border-radius:6px; font-weight:bold; font-family:Arial, sans-serif; display:inline-block;">
        Game Development
     </a>
 
 </div>
+
 
 ---
 
