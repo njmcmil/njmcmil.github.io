@@ -1,4 +1,5 @@
 # **Github Repositories**
 
-https://github.com/njmcmil?tab=repositories
-
+<a href="https://github.com/njmcmil?tab=repositories" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-Repositories-black?style=for-the-badge&logo=github" alt="GitHub Repositories">
+</a>
