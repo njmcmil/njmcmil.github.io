@@ -1,51 +1,110 @@
----
-permalink: /
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nathan McMillan — Clemson University</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-top: 40px;
+        }
+        .header img {
+            border-radius: 10px;
+        }
+        .header h1 {
+            color: #F66733;
+            margin: 10px 0 5px 0;
+        }
+        .header h3 {
+            color: #522D80;
+            margin: 0;
+        }
+        .header p {
+            font-size: 16px;
+            color: #333;
+            max-width: 600px;
+            margin: 10px auto 0 auto;
+        }
+        .menu {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .menu a {
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .menu a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+        .resume-btn { background-color: #F66733; color: white; }
+        .code-btn { background-color: #522D80; color: white; }
+        .repo-btn { background-color: #333; color: white; }
+        .game-btn { background-color: #FF6F61; color: white; }
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 14px;
+            color: #666;
+            padding-bottom: 30px;
+        }
+        /* Optional Back Button for other pages */
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #522D80;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: bold;
+            text-decoration: none;
+            z-index: 1000;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
 
-<!-- Clemson Header -->
-<div style="text-align:center; margin-bottom:40px;">
-    <img src="/images/clemson-logo.png" alt="Clemson University" width="120" style="border-radius:10px;" />
-    <h1 style="color:#F66733; margin:10px 0 5px 0;">Nathan McMillan</h1>
-    <h3 style="color:#522D80; margin:0;">Senior, B.S. Computer Science</h3>
-    <p style="font-size:16px; color:#333;">Passionate about developing innovative software solutions and tackling complex programming challenges.</p>
-</div>
+    <!-- Clemson Header -->
+    <div class="header">
+        <img src="/images/clemson-logo.png" alt="Clemson University" width="120" />
+        <h1>Nathan McMillan</h1>
+        <h3>Senior, B.S. Computer Science</h3>
+        <p>Passionate about developing innovative software solutions and tackling complex programming challenges.</p>
+    </div>
 
----
+    <!-- Main Menu -->
+    <div class="menu">
+        <a class="resume-btn" href="docs/resume.html">Public Resume</a>
+        <a class="code-btn" href="docs/snippit.html">Code Snippets</a>
+        <a class="repo-btn" href="docs/repo.html">Repositories</a>
+        <a class="game-btn" href="docs/gamedev.html">Game Development</a>
+    </div>
 
-## Menu
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Nathan McMillan — Clemson University
+    </footer>
 
-<div style="display:flex; gap:20px; flex-wrap:wrap; justify-content:center; margin-top:20px;">
-
-    <!-- Resume -->
-    <a href="docs/resume.html" 
-       style="background-color:#F66733; color:white; padding:12px 24px; text-decoration:none; border-radius:6px; font-weight:bold; font-family:Arial, sans-serif; display:inline-block;">
-       Public Resume
-    </a>
-
-    <!-- Code Snippets -->
-    <a href="docs/snippit.html" 
-       style="background-color:#522D80; color:white; padding:12px 24px; text-decoration:none; border-radius:6px; font-weight:bold; font-family:Arial, sans-serif; display:inline-block;">
-       Code Snippets
-    </a>
-
-    <!-- Repositories -->
-    <a href="docs/repo.html" 
-       style="background-color:#333; color:white; padding:12px 24px; text-decoration:none; border-radius:6px; font-weight:bold; font-family:Arial, sans-serif; display:inline-block;">
-       Repositories
-    </a>
-
-    <!-- Game Development -->
-    <a href="docs/gamedev.html" 
-       style="background-color:#FF6F61; color:white; padding:12px 24px; text-decoration:none; border-radius:6px; font-weight:bold; font-family:Arial, sans-serif; display:inline-block;">
-       Game Development
-    </a>
-
-</div>
-
-
----
-
-<!-- Footer / Optional -->
-<div style="text-align:center; margin-top:50px; font-size:14px; color:#666;">
-    &copy; 2025 Nathan McMillan — Clemson University
-</div>
+</body>
+</html>
