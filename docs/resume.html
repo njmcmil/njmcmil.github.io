@@ -1,30 +1,38 @@
+<link rel="stylesheet" href="/docs/styles.css">
+<title>Nathan McMillan | Resume</title>
 
-<!-- Page Container -->
-<div style="max-width:800px; margin:0 auto; text-align:center; font-family:Arial, sans-serif;">
-
-    <!-- Page Title -->
-    <h2 style="color:#F66733; margin-bottom:20px;">My Resume</h2>
-
-    <!-- PDF Preview -->
-    <div style="border:2px solid #522D80; border-radius:10px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.1); margin-bottom:20px;">
-        <iframe src="/Nathan-McMillan-Resume.pdf" width="100%" height="800px" style="border:none;">
-            This browser does not support PDFs. Please download the PDF to view it: 
-            <a href="/Nathan-McMillan-Resume.pdf" style="color:#4285F4; font-weight:bold;">Download PDF</a>.
-        </iframe>
-    </div>
-
-    <!-- Download Button -->
-    <a href="/Nathan-McMillan-Resume.pdf" download
-       style="background-color:#F66733; color:white; padding:14px 28px; text-decoration:none; border-radius:8px; font-weight:bold; font-size:16px; display:inline-block; box-shadow:0 4px 8px rgba(0,0,0,0.2); transition:0.3s;">
-       Download My Resume
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="/">
+      <img src="/images/clemson-logo.png" alt="Clemson University logo">
+      <span>Nathan McMillan</span>
     </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="/">Home</a>
+      <a href="/docs/projects.html">Projects</a>
+      <a href="/docs/snippit.html">Screenshots</a>
+      <a href="/docs/gamedev.html">Game Dev</a>
+      <a href="https://github.com/njmcmil?tab=repositories" target="_blank" rel="noreferrer">GitHub</a>
+    </nav>
+  </div>
+</header>
 
-    <!-- Button Hover Effect -->
-    <style>
-        a:hover {
-            box-shadow:0 6px 12px rgba(0,0,0,0.3);
-            transform: translateY(-2px);
-        }
-    </style>
+<main class="site-shell">
+  <section class="page-hero">
+    <p class="eyebrow">Resume</p>
+    <h1>Experience, education, and technical background.</h1>
+    <p>View the current resume inline or download the PDF directly.</p>
+    <div class="hero-actions">
+      <a class="button orange" href="/Nathan-McMillan-Resume.pdf" download>Download PDF</a>
+      <a class="button" href="/Nathan-McMillan-Resume.pdf" target="_blank" rel="noreferrer">Open in New Tab</a>
+    </div>
+  </section>
 
-</div>
+  <section class="section">
+    <div class="resume-frame">
+      <iframe src="/Nathan-McMillan-Resume.pdf" title="Nathan McMillan resume PDF">
+        This browser does not support embedded PDFs. <a href="/Nathan-McMillan-Resume.pdf">Download the resume PDF</a>.
+      </iframe>
+    </div>
+  </section>
+</main>
