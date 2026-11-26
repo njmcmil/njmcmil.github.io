@@ -14,12 +14,14 @@ type Props = {
   class?: string;
   size?: "sm" | "lg";
   pubDatetime: string | Date;
+  period?: string;
   timezone?: string;
   modDatetime?: string | Date | null;
 };
 
 const {
   pubDatetime,
+  period,
   modDatetime,
   size = "sm",
   class: className = "",
@@ -47,16 +49,16 @@ const date = datetime.format("D MMM, YYYY");
     ]}
   />
   {
-    isModified && (
+    !period && isModified && (
       <span class:list={["text-sm", { "sm:text-base": size === "lg" }]}>
         {t.post.updatedAt}:
       </span>
     )
   }
-  <time
+  {period ? <span class:list={["text-sm", { "sm:text-base": size === "lg" }]}>{period}</span> : <time
     class:list={["text-sm", { "sm:text-base": size === "lg" }]}
     datetime={datetime.toISOString()}
   >
     {date}
-  </time>
+  </time>}
 </div>

@@ -4,6 +4,7 @@ export default {
   nav: {
     home: "Home",
     posts: "Posts",
+    projects: "Projects",
     tags: "Tags",
     about: "About",
     archives: "Archives",
@@ -21,6 +22,8 @@ export default {
     goBack: "Go back",
     editPage: "Edit page",
     previousPost: "Previous Post",
+    previousProject: "Previous Project",
+    nextProject: "Next Project",
     nextPost: "Next Post",
   },
   pagination: {
@@ -30,9 +33,9 @@ export default {
   },
   home: {
     socialLinks: "Social Links",
-    featured: "Featured",
-    recentPosts: "Recent Posts",
-    allPosts: "All Posts",
+    featured: "Featured Projects",
+    recentPosts: "Projects",
+    allProjects: "All Projects",
   },
   footer: {
     copyright: "Copyright",
@@ -49,7 +52,7 @@ export default {
     postsDesc: "All the articles I've posted.",
 
     archivesTitle: "Archives",
-    archivesDesc: "All the articles I've archived.",
+    archivesDesc: "Projects and experience by starting year.",
 
     searchTitle: "Search",
     searchDesc: "Search any article ...",

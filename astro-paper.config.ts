@@ -2,14 +2,14 @@ import { defineAstroPaperConfig } from "./src/types/config";
 
 export default defineAstroPaperConfig({
   site: {
-    url: "https://astro-paper.pages.dev/",
-    title: "AstroPaper",
-    description: "A minimal, responsive and SEO-friendly Astro blog theme.",
-    author: "Sat Naing",
-    profile: "https://satna.ing",
-    ogImage: "default-og.jpg",
+    url: "https://njmcmil.github.io/",
+    title: "Nathan McMillan",
+    description: "Nathan McMillan’s portfolio of applied AI research, software projects, and technical experience at Clemson University.",
+    author: "Nathan McMillan",
+    profile: "https://www.linkedin.com/in/nathan-mcmillan-a90625227/",
+    ogImage: "og.png",
     lang: "en",
-    timezone: "Asia/Bangkok",
+    timezone: "America/New_York",
     dir: "ltr",
   },
   posts: {
@@ -22,17 +22,15 @@ export default defineAstroPaperConfig({
     showArchives: true,
     showBackButton: true,
     editPost: {
-      enabled: true,
-      url: "https://github.com/satnaing/astro-paper/edit/main/",
+      enabled: false,
     },
     search: "pagefind",
     toc: true,
   },
   socials: [
-    { name: "github",   url: "https://github.com/satnaing/astro-paper" },
-    { name: "x",        url: "https://x.com/username" },
-    { name: "linkedin", url: "https://www.linkedin.com/in/username/" },
-    { name: "mail",     url: "mailto:yourmail@gmail.com" },
+    { name: "github",   url: "https://github.com/njmcmil" },
+    { name: "linkedin", url: "https://www.linkedin.com/in/nathan-mcmillan-a90625227/" },
+    { name: "mail",     url: "mailto:njmcmillan04@gmail.com" },
   ],
   shareLinks: [
     { name: "whatsapp", url: "https://wa.me/?text=" },

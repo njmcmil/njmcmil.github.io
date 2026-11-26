@@ -6,26 +6,45 @@ import Datetime from "./Datetime.astro";
 
 type Props = {
   variant?: "h2" | "h3";
+  showPreview?: boolean;
 } & CollectionEntry<"posts">;
 
-const { variant: Heading = "h2", id, data, filePath } = Astro.props;
+const { variant: Heading = "h2", showPreview, id, data, filePath } = Astro.props;
 
 const { title, description, ...props } = data;
+const animatedPreview = data.previewImage?.endsWith(".gif");
 ---
 
-<li class="my-6">
+<li class="py-6">
   <a
-    href={getPostUrl(id, filePath, Astro.currentLocale)}
+    href={data.organizationUrl ?? getPostUrl(id, filePath, Astro.currentLocale)}
     class:list={[
-      "text-accent inline-block text-lg font-medium",
+      "inline-block text-lg font-medium",
+      data.tags.includes("experience")
+        ? "text-[#522D80] dark:text-[#CEB5EB]"
+        : "text-accent",
       "decoration-dashed underline-offset-4 hover:underline",
       "focus-visible:no-underline focus-visible:underline-offset-0",
     ]}
   >
-    <Heading transition:name={toTransitionName(id)}>
+    <Heading class:list={[{ "flex items-center gap-3": data.logo }]} transition:name={toTransitionName(id)}>
+      {data.logo && <img src={data.logo} alt="" class="size-10 shrink-0 object-contain" />}
       {title}
     </Heading>
   </a>
   <Datetime {...props} />
-  <p>{description}</p>
+  {showPreview && data.previewImage && (
+    <a href={getPostUrl(id, filePath, Astro.currentLocale)} class:list={[
+      "mt-4 block",
+      { "overflow-hidden rounded-md border border-border bg-muted/30": animatedPreview },
+    ]}>
+      <img src={data.previewImage} alt={data.previewAlt ?? title} loading="lazy"
+        class:list={[
+          animatedPreview
+            ? "mx-auto block h-auto max-h-[28rem] max-w-full object-contain"
+            : "max-h-96 max-w-full rounded-md border border-border",
+        ]} />
+    </a>
+  )}
+  <p class:list={["max-w-prose leading-relaxed", showPreview && data.previewImage ? "mt-5" : "mt-2"]}>{description}</p>
 </li>

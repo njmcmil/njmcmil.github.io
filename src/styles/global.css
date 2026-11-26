@@ -23,11 +23,15 @@
 }
 
 @utility max-w-app {
-  @apply max-w-3xl;
+  @apply max-w-5xl;
 }
 
 @utility app-layout {
   @apply max-w-app mx-auto w-full px-4;
+}
+
+@utility home-layout {
+  @apply max-w-app mr-auto w-full px-4 sm:pl-8;
 }
 
 @utility active-nav {

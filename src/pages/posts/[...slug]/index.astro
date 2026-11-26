@@ -22,30 +22,32 @@ export async function getStaticPaths() {
   const posts = await getCollection("posts");
   const sortedPosts = getSortedPosts(posts);
 
-  return sortedPosts.map((post, index) => ({
+  const projects = sortedPosts.filter(post => post.data.tags.includes("project"));
+  const otherPosts = sortedPosts.filter(post => !post.data.tags.includes("project"));
+  return [projects, otherPosts].flatMap(group => group.map((post, index) => ({
     params: { slug: getPostSlug(post.id, post.filePath) },
     props: {
       post,
-      // sortedPosts is newest-first, so "older" (prev) is a higher index
+      // Each group is newest-first, so "older" (prev) is a higher index
       // and "newer" (next) is a lower index.
       prevPost:
-        index < sortedPosts.length - 1
+        index < group.length - 1
           ? {
-              id: sortedPosts[index + 1].id,
-              title: sortedPosts[index + 1].data.title,
-              filePath: sortedPosts[index + 1].filePath,
+              id: group[index + 1].id,
+              title: group[index + 1].data.title,
+              filePath: group[index + 1].filePath,
             }
           : null,
       nextPost:
         index > 0
           ? {
-              id: sortedPosts[index - 1].id,
-              title: sortedPosts[index - 1].data.title,
-              filePath: sortedPosts[index - 1].filePath,
+              id: group[index - 1].id,
+              title: group[index - 1].data.title,
+              filePath: group[index - 1].filePath,
             }
           : null,
     },
-  }));
+  })));
 }
 
 type AdjacentPost = {
@@ -125,7 +127,7 @@ const ogImage = ogImageUrl
     </h1>
 
     <div class="my-2 flex items-center gap-2">
-      <Datetime {pubDatetime} {modDatetime} {timezone} size="lg" />
+      <Datetime {pubDatetime} {modDatetime} {timezone} period={post.data.period} size="lg" />
       <span
         aria-hidden="true"
         class:list={[
@@ -177,7 +179,7 @@ const ogImage = ogImageUrl
 
     <hr class="my-8 border-dashed" />
 
-    <AdjacentPostNav {prevPost} {nextPost} />
+    <AdjacentPostNav {prevPost} {nextPost} isProject={tags.includes("project")} />
   </main>
   <Footer />
 </PostLayout>

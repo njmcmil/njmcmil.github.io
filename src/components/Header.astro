@@ -42,16 +42,19 @@ const isActive = (path: string) => {
   {t.a11y.skipToContent}
 </a>
 
-<header
-  class="app-layout flex flex-col items-center justify-between sm:flex-row"
+<header 
+  class="w-full flex flex-col items-center justify-between sm:flex-row"
 >
   <div
-    class="border-border bg-background relative flex w-full items-baseline justify-between border-b py-4 sm:items-center sm:py-6"
+    class="px-5 border-border bg-background relative flex w-full items-baseline justify-between border-b py-4 sm:items-center sm:py-6"
   >
     <a
       href={getRelativeLocaleUrl(locale, "")}
-      class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"
+      aria-label={`${site.title}, ${t.nav.home}`}
+      aria-current={currentPath === "/" ? "page" : undefined}
+      class="focus-outline absolute z-10 inline-flex items-center gap-2.5 py-1 text-lg leading-8 font-semibold tracking-tight whitespace-nowrap hover:text-accent sm:static sm:my-auto sm:text-xl"
     >
+      <span aria-hidden="true" class="h-5 w-1 rounded-full bg-[#522D80] dark:bg-[#CEB5EB]"></span>
       {site.title}
     </a>
     <nav
@@ -76,10 +79,10 @@ const isActive = (path: string) => {
       >
         <li class="col-span-2">
           <a
-            href={getRelativeLocaleUrl(locale, "posts")}
-            class:list={{ "active-nav": isActive("/posts") }}
+            href={getRelativeLocaleUrl(locale, "projects")}
+            class:list={{ "active-nav": isActive("/projects") || isActive("/posts") }}
           >
-            {t.nav.posts}
+            {t.nav.projects}
           </a>
         </li>
         <li class="col-span-2">

@@ -11,8 +11,13 @@ const posts = defineCollection({
     z.object({
       author: z.string().default(config.site.author),
       pubDatetime: z.date(),
+      period: z.string().optional(),
       modDatetime: z.date().optional().nullable(),
       title: z.string(),
+      organizationUrl: z.string().url().optional(),
+      logo: z.string().optional(),
+      previewImage: z.string().optional(),
+      previewAlt: z.string().optional(),
       featured: z.boolean().optional(),
       draft: z.boolean().optional(),
       tags: z.array(z.string()).default(["others"]),
